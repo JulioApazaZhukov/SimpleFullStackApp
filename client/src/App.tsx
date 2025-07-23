@@ -1,5 +1,4 @@
 import _React, { Fragment } from "react";
-import "./App.css";
 
 import InputTodo from "./components/InputTodo.tsx";
 import ListTodos from "./components/ListTodos.tsx";
