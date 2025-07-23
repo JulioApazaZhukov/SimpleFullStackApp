@@ -13,5 +13,5 @@ deno --allow-env --allow-net main.ts
 psql -U postgres
 \l
 \c todoapp
-SELECT * FROM todoapp
+SELECT * FROM todo;
 ```
