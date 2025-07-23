@@ -25,7 +25,7 @@ app.post("/todos", async (req: Request, res: Response) => {
 });
 
 // get all todos
-app.get("/todos", async (res: Response) => {
+app.get("/todos", async (_req: Request, res: Response) => {
   try {
     const allTodos = await pool.query("SELECT * FROM todo");
     res.json(allTodos.rows);
@@ -64,7 +64,7 @@ app.put("/todos/:id", async (req: Request, res: Response) => {
 });
 
 // delete a todo
-app.get("/todos/:id", async (req: Request, res: Response) => {
+app.delete("/todos/:id", async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
     const _deleteTodo = await pool.query(
